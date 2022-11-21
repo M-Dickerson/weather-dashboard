@@ -6,14 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel = "stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <!-- css -->
     <link rel = "stylesheet" href="./style.css"
 </head>
 <body>
-    <header class="bg-dark color-white">
+    <header class="container-fluid bg-dark">
         <h1>Weather Dashboard</h1>
     </header>
+
+    <main>
+        <section id="search" class=" card-body col-lg-4">
+            <h5>Search for a city</h5>
+            <form class="form-inline">
+                <input type="search" placeholder="city name"
+            </form>
+        </section>
+    </main>
     
+
+    <!-- jquery -->
+    <script src = "https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src = "./script.js"></script>
 </body>
 </html>
