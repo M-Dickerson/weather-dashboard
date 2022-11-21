@@ -11,24 +11,26 @@
     <link rel="stylesheet" href="./style.css"
 </head>
 <body>
-    <header class="container-fluid bg-dark">
+    <header class="bg-dark">
         <h1>Weather Dashboard</h1>
     </header>
 
-    <main>
-        <aside id="search" class=" card-body col-lg-4">
+    <main class="container-fluid row">
+        <!-- search -->
+        <aside id="search-section" class=" card-body col-lg-4">
             <h2>Search for a city</h2>
             <form class="form-inline">
-                <input type="search" placeholder="city name"/>
-                <button>search</button>
+                <input type="search" placeholder="Enter city name" class=" form-control input"/>
+                <button type="submit" class="search-button">search</button>
             </form>
+            <div class="cities-list"></div>
         </aside>
-
-        <section class="col-lg-8">
+        <!-- current date and weather -->
+        <section class="col-lg-8 container-left-columns row border border-dark rounded">
             <p class="city"></p><p class="current-date"></p>
-            <p class="current-temp"></p>
-            <p class="current-wind"></p>
-            <p class="current-humidity"></p>
+            <p class="current" id="temperature">Temp:</p>
+            <p class="current" id="wind">Wind:</p>
+            <p class="current" id="humidity">Humidity:</p>
         </section>
     </main>
     
