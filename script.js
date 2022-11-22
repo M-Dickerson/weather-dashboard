@@ -80,17 +80,52 @@ function forecast(cityid){
         method: "GET"
     }).then(function(response){
         for (i = 0; i < 5; i++){
-            var date= new Date((response.list[((i+1)*8)-1].dt)*1000).toLocaleDateString();
-            var iconcode= response.list[((i+1)*8)-1].weather[0].icon;
-            var iconurl="https://openweathermap.org/img/wn/" + iconcode + ".png";
-            var tempK= response.list[((i+1)*8)-1].main.temp;
-            var tempF=(((tempK-273.5)*1.80)+32).toFixed(2);
-            var humidity= response.list[((i+1)*8)-1].main.humidity;
+            var date = new Date((response.list[((i+1)*8)-1].dt)*1000).toLocaleDateString();
+            var iconcode = response.list[((i+1)*8)-1].weather[0].icon;
+            var iconurl = "https://openweathermap.org/img/wn/" + iconcode + ".png";
+            var tempK = response.list[((i+1)*8)-1].main.temp;
+            var tempF = (((tempK-273.5)*1.80)+32).toFixed(2);
+            var humidity = response.list[((i+1)*8)-1].main.humidity;
+            var windS = response.list[((i+1)*8)-1].wind.speed;
+            var windF = ((windS*2.237).toFixed(1));
         
             $("#fDate" + i).html(date);
             $("#fImg" + i).html("<img src="+iconurl+">");
             $("#fTemp" + i).html(tempF+"&#8457");
             $("#fHumidity" + i).html(humidity+"%");
+            $("#fWind" + i).html(windF+"MPH");
         }
     })
 }
+// creates a clickable list of every state entered into local storage
+function addToList(data){
+    var listEl= $("<li>"+data.toUpperCase()+"</li>");
+    $(listEl).attr("class","list-group-item");
+    $(listEl).attr("data-value", data.toUpperCase());
+    $(".city-list").append(listEl);
+}
+// displays a previously typed search result on click
+function invokePastSearch(weatherEvent){
+    var liEl = weatherEvent.target;
+    if (weatherEvent.target.matches("li")){
+        city = liEl.textContent.trim();
+        currentWeather(city);
+    }
+}
+// 
+function loadlastCity(){
+    $("ul").empty();
+    var cityArray = JSON.parse(localStorage.getItem("cityname"));
+    if (cityArray !== null){
+        cityArray = JSON.parse(localStorage.getItem("cityname"));
+        for(i = 0; i < cityArray.length; i++){
+            addToList(cityArray[i]);
+        }
+        city = cityArray[i-1];
+        currentWeather(city);
+    }
+}
+//Click Handlers
+$("#search-button").on("click",Weather);
+$(document).on("click",invokePastSearch);
+$(window).on("load",loadlastCity);
