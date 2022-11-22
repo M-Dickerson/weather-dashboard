@@ -9,70 +9,75 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.2/css/bootstrap.min.css" />
     <!-- font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mali&display=swap" rel="stylesheet">
     <!-- css -->
     <link rel="stylesheet" href="./style.css"
 </head>
 <body>
     <!-- header -->
-    <header class="bg-dark">
+    <header class="bg-dark mb-3">
         <h1>Weather Dashboard</h1>
     </header>
 
     <main class="container-fluid row">
         <!-- search -->
-        <aside class=" card-body col-lg-4">
-            <h3>Search for a city</h3>
+        <aside class="card-body col-sm-4 bg-light">
+            <h2>Search for a city</h2>
             <form class="form-inline">
-                <input type="text" placeholder="Enter city name" class="form-control" id="search-city"/>
-                <button class="btn bg-primary" id="search-button">search</button>
+                <input type="text" placeholder="Enter city name" class="form-control mb-3" id="search-city"/>
+                <button class="btn bg-info" id="search-button">search</button>
             </form>
-            <ul class="city-list"></ul>
+            <hr>
+            <ul class="city-list p-0"></ul>
         </aside>
         <!-- current date and weather -->
-        <section class="col-lg-8">
-            <article class="row border border-dark rounded col-sm-12" id="current-weather">
-                <h2 class="city-name" id="current-city"></h2>
+        <section class="col-sm-8">
+            <article class="col-sm-12 border border-dark rounded" id="current-weather">
+                <h2 class="city-name mb-1 mt-2" id="current-city"></h2>
                 <p class="current" id="temperature">Temp:</p>
                 <p class="current" id="wind">Wind:</p>
                 <p class="current" id="humidity">Humidity:</p>
             </article>
         <!-- future weather -->
-            <article class="col-sm-12 row" id ="future-weather">
+            <article class="col-sm-12 row justify-content-around" id ="future-weather">
                 <h3>5-Day Forecast:</h3>
-                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                <section class="col-sm-2 bg-info ml-2 mb-2 p-2 mt-2 rounded">
                     <p id="fDate0"></p>
                     <p id="fImg0"></p>
                     <p id="fTemp0">Temp:</p>
                     <p id="fWind0">Wind:</p>
                     <p id="fHumidity0">Wind:</p>
                 </section>
-                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                <section class="col-sm-2 bg-info ml-2 mb-2 p-2 mt-2 rounded">
                     <p id="fDate1"></p>
                     <p id="fImg1"></p>
                     <p id="fTemp1">Temp:</p>
                     <p id="fWind1">Wind:</p>
                     <p id="fHumidity1">Wind:</p>
                 </section>
-                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                <section class="col-sm-2 bg-info ml-2 mb-2 p-2 mt-2 rounded">
                     <p id="fDate2"></p>
                     <p id="fImg2"></p>
                     <p id="fTemp2">Temp:</p>
                     <p id="fWind2">Wind:</p>
                     <p id="fHumidity2">Wind:</p>
                 </section>
-                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                <section class="col-sm-2 bg-info ml-2 mb-2 p-2 mt-2 rounded">
                     <p id="fDate3"></p>
                     <p id="fImg3"></p>
                     <p id="fTemp3">Temp:</p>
                     <p id="fWind3">Wind:</p>
                     <p id="fHumidity3">Wind:</p>
                 </section>
-                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
-                    <p id="fDate0"></p>
-                    <p id="fImg0"></p>
-                    <p id="fTemp0">Temp:</p>
-                    <p id="fWind0">Wind:</p>
-                    <p id="fHumidity0">Wind:</p>
+                <section class="col-sm-2 bg-info ml-2 mb-2 p-2 mt-2 rounded">
+                    <p id="fDate4"></p>
+                    <p id="fImg4"></p>
+                    <p id="fTemp4">Temp:</p>
+                    <p id="fWind4">Wind:</p>
+                    <p id="fHumidity4">Wind:</p>
                 </section>
             </article>
         </section>
