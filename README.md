@@ -2,44 +2,18 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
-## Installation
-
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+The motivation and purpose behind this project was to create a weather dashboard that can show the current weather, as well as the weather for the next five days. Regardless of what state is entered into the search field, the weather data should populate for that state. I learned a lot about properly linking apis and centering an app around them. I also learned a lot about bootstrap and using jquery to style and create elements.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
+To get started all you have to do is type any of the 50 states into the search field and click the search button. The state entered will populate below the search button into a list, which is clickable. If you want to see the weather of a previous state that you entered, all you have to do is click the name of that state from the list.
 
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative filepath, add it to your README using the following syntax:
+[Link to deployed app]()
 
-    ```md
-    ![alt text](assets/images/screenshot.png)
-    ```
-
-## Credits
-
-List your collaborators, if any, with links to their GitHub profiles.
-
-If you used any third-party assets that require attribution, list the creators with links to their primary web presence in this section.
-
-If you followed tutorials, include links to those here as well.
+![screenshot of application](./assets/app-screenshot.png)
 
 ## License
 
-The last section of a high-quality README file is the license. This lets other developers know what they can and cannot do with your project. If you need help choosing a license, refer to [https://choosealicense.com/](https://choosealicense.com/).
+MIT License
+
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.

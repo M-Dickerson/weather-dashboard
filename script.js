@@ -105,7 +105,7 @@ function addToList(data){
     $(".city-list").append(listEl);
 }
 // displays a previously typed search result on click
-function invokePastSearch(weatherEvent){
+function PastSearch(weatherEvent){
     var liEl = weatherEvent.target;
     if (weatherEvent.target.matches("li")){
         city = liEl.textContent.trim();
@@ -127,5 +127,5 @@ function loadlastCity(){
 }
 //Click Handlers
 $("#search-button").on("click",Weather);
-$(document).on("click",invokePastSearch);
+$(document).on("click",PastSearch);
 $(window).on("load",loadlastCity);
