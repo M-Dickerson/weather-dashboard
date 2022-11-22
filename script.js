@@ -1,22 +1,51 @@
-// my apikey
-var apikey = "46284fce87c7f71033bf8fc8bd177bd1";
+// variables for current weather section
+var city = "";
+var cityList = $(".city-list");
+var searchCity = $("#search-city");
+var currentCity = $("#current-city");
+var currentTemp = $("#temperature");
+var currentHumidity = $("#humidity");
+var currentWind = $("wind");
+var cityArray = [];
+// searches for the city typed in
+function find(data){
+    for (var i = 0; i < cityArray.length; i++){
+        if(data.toUpperCase() === cityArray[i]){
+            return -1;
+        };
+    };
+    return 1;
+};
+// my api key
+var apikey = "1d3c67d57918d41bff260c0115e9886c";
+// displays the city that was searched
+function Weather(weatherEvent){
+    weatherEvent.preventDefault();
+    if (searchCity.val().trim()!==""){
+        city=searchCity.val().trim();
+        currentWeather(city);
+    };
+};
+// current weather 
+function currentWeather(city){
+    // link for current weather
+    var cWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + apikey;
+    $.ajax({
+        url: cWeatherURL,
+        method: "GET",
+    }).then(function (response) {
+        var weatherIcon = response.weather[0].icon;
+        var iconPath = "api.openweathermap.org/img/wn/"+ weatherIcon +"@2x.png";
 
-// 
-var inputEl = document.querySelector(".input");
+        var date=new Date(response.dt*1000).toLocaleDateString();
+        $(currentCity).html(response.name +"("+date+")" + "<img src="+iconPath+">");
 
-// stores city name in local storage
-var cityName = localStorage.getItem("citynameContent");
+        var temp = (response.main.temp - 273.15) * 1.80 +32;
+        $(currentTemp).html((temp).toFixed(2)+"&#8457");
+        $(currentHumidity).html(response.main.humidity+"%");
 
-// current day weather url
-var currentWeatherURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&APPID=" + apikey;
-// five day weather url
-var forcastWeatherURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + cityName + "&APPID=" + apikey;
-
-// 
-function recordCityName () {
-    localStorage.setItem("citynameContent", inputEl.vaule);
-}
-
-for (var i = 0; 1 < localStorage.length; i++) {
-    $()
+        var windSpeed = response.wind.speed;
+        var windMPH = (windSpeed*2.237).toFixed(1);
+        $(currentWind).html(windMPH + "MPH");
+    });
 }
