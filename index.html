@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./style.css"
 </head>
 <body>
+    <!-- header -->
     <header class="bg-dark">
         <h1>Weather Dashboard</h1>
     </header>
@@ -35,9 +36,44 @@
                 <p class="current" id="wind">Wind:</p>
                 <p class="current" id="humidity">Humidity:</p>
             </article>
-
-            <article class="col-sm-12" id ="future-weather">
+        <!-- future weather -->
+            <article class="col-sm-12 row" id ="future-weather">
                 <h3>5-Day Forecast:</h3>
+                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                    <p id="fDate0"></p>
+                    <p id="fImg0"></p>
+                    <p id="fTemp0">Temp:</p>
+                    <p id="fWind0">Wind:</p>
+                    <p id="fHumidity0">Wind:</p>
+                </section>
+                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                    <p id="fDate1"></p>
+                    <p id="fImg1"></p>
+                    <p id="fTemp1">Temp:</p>
+                    <p id="fWind1">Wind:</p>
+                    <p id="fHumidity1">Wind:</p>
+                </section>
+                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                    <p id="fDate2"></p>
+                    <p id="fImg2"></p>
+                    <p id="fTemp2">Temp:</p>
+                    <p id="fWind2">Wind:</p>
+                    <p id="fHumidity2">Wind:</p>
+                </section>
+                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                    <p id="fDate3"></p>
+                    <p id="fImg3"></p>
+                    <p id="fTemp3">Temp:</p>
+                    <p id="fWind3">Wind:</p>
+                    <p id="fHumidity3">Wind:</p>
+                </section>
+                <section class="col-sm-2 bg-primary text-white ml-2 mb-3 rounded">
+                    <p id="fDate0"></p>
+                    <p id="fImg0"></p>
+                    <p id="fTemp0">Temp:</p>
+                    <p id="fWind0">Wind:</p>
+                    <p id="fHumidity0">Wind:</p>
+                </section>
             </article>
         </section>
     </main>
@@ -45,6 +81,7 @@
 
     <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- javascript -->
     <script src="./script.js"></script>
 </body>
 </html>
