@@ -8,7 +8,7 @@ The motivation and purpose behind this project was to create a weather dashboard
 
 To get started all you have to do is type any state into the search field and click the search button. The state entered will populate below the search button into a list, which is clickable. If you want to see the weather of a previous state that you entered, all you have to do is click the name of that state from the list.
 
-[Link to deployed app]()
+[Link to deployed app](https://m-dickerson.github.io/weather-dashboard/)
 
 ![screenshot of application](./assets/images/app-screenshot.png)
 
