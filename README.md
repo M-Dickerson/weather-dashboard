@@ -10,7 +10,7 @@ To get started all you have to do is type any of the 50 states into the search f
 
 [Link to deployed app]()
 
-![screenshot of application](./assets/app-screenshot.png)
+![screenshot of application](./assets/images/app-screenshot.png)
 
 ## License
 
