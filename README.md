@@ -6,7 +6,7 @@ The motivation and purpose behind this project was to create a weather dashboard
 
 ## Usage
 
-To get started all you have to do is type any of the 50 states into the search field and click the search button. The state entered will populate below the search button into a list, which is clickable. If you want to see the weather of a previous state that you entered, all you have to do is click the name of that state from the list.
+To get started all you have to do is type any state into the search field and click the search button. The state entered will populate below the search button into a list, which is clickable. If you want to see the weather of a previous state that you entered, all you have to do is click the name of that state from the list.
 
 [Link to deployed app]()
 
